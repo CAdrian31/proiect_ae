@@ -8,19 +8,22 @@ atunci cand isi planifica o potentiala viitoare calatorie.
 
 
 # Componente:
-Cautare locatie dorita pentru calatorie.
-Tabel cu vremea pe zilele urmatoare pentru acea locatie.
+Tabel cu utilizatorii aplicatiei.
+Tabel cu destinatiile utilizatorilor si informatii despre vreme.
 
 # API calls
 get/location
 get/weather
 
 # Actiunile utilizatorului
-Seteaza o data. 
+Se inregistreaza in aplicatie.
 Cauta o locatie.
 Se informeaza in legatura cu vremea din acea locatie.
 
 # Link catre c9
 https://ide.c9.io/adrian97/proiect_tw_bun
+
+
+
 
 

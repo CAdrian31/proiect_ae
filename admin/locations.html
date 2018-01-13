@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calatorie Admin - Locations</title>
+    <title>Planifica-ti calatoria - Locations</title>
     
     <!-- Jquery JS file -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -18,17 +18,18 @@
     <script type="text/javascript" src="js/serialize.js"></script>
     <script type="text/javascript" src="js/locations.js"></script>
 </head>
-<body>
+<body >
+
+<!--  id="image" style="background: url(fundal.jpg) no-repeat; width: 100%; height: 150px; background-size: 100%;" -->
 
 <!-- Content Section -->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Locatie Calatorie Admin</h1>
+            <h1>Planifica-ti calatoria</h1>
         </div>
     </div>
     <ul class="nav nav-tabs">
-      <li role="presentation"><a href="/admin/">Home</a></li>
       <li role="presentation"><a href="tourists.html">Turisti</a></li>
       <li role="presentation" class="active"><a href="locations.html">Locati</a></li>
     </ul>
@@ -48,11 +49,12 @@
                 <table id="articles" class="table table-bordered table-striped">
 						<tr>
 							<th>ID.</th>
-							<th>Tourist Name</th>
-							<th>Nume</th>
+							<th>Nume turist</th>
+							<th>Nume locatie</th>
 							<th>Descriere</th>
 							<th>Update</th>
 							<th>Exclude</th>
+							<th>Vreme</th>
 						</tr>
             		</tr>
 				</<table>
@@ -80,7 +82,7 @@
                         <input type="text" name="tourist_id" id="tourist_id" placeholder="ID Turist" class="form-control"/>
                     </div>
                     <div class="form-group">
-                        <label for="name">Nume</label>
+                        <label for="name">Nume locatie</label>
                         <input type="text" name="name" id="name" placeholder="Nume" class="form-control"/>
                     </div>
                     <div class="form-group">

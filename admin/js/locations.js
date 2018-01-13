@@ -18,6 +18,7 @@ function readRecords() {
 }
 
 function displayColumns(value) {
+    
     return 	'<td>'+value.id+'</td>'
             + '<td class="tourist_id">'+value.tourist.name+'</td>'
             + '<td class="name">'+value.name+'</td>'
@@ -27,7 +28,24 @@ function displayColumns(value) {
 			+ '</td>'
 			+ '<td align="center">'
 			+	'<button onclick="deleteRecord('+ value.id +')" class="btn btn-danger">Delete</button>'
-			+ '</td>';
+			+ '</td>'
+			+ '<td class="vreme">'+goWeather(value).temp+ '</td>';
+}
+
+async function goWeather(value){
+    //window.open("https://www.wunderground.com/","_self")
+    var string = "https://api.wunderground.com/api/2f38023df19543ae/conditions/q/" +value.description+ "/"+ value.name +".json"
+    
+    var weather = new XMLHttpRequest();
+    await weather.open("GET", string, false);
+    weather.send(null);
+
+    var r = JSON.parse(weather.response);
+    
+   // var dis = "Current location: " + r.current_observation.display_location.full + "  <p>";
+    var temp = r.current_observation.temperature_string+ "  <p>";
+    var wind = r.current_observation.wind_string;
+
 }
 
 function addRecord() {
@@ -111,3 +129,4 @@ function deleteRecord(id) {
         }
     });
 }
+
