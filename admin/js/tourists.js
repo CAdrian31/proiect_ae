@@ -38,6 +38,7 @@ function addRecord() {
   //  $('#add_new_record_modal').modal('show');
 }
 
+
 function viewRecord(id) {
     var url = "/tourists/" + id;
     
