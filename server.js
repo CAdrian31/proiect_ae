@@ -1,16 +1,17 @@
 var express = require("express")
 var Sequelize = require("sequelize")
-var nodeadmin = require("nodeadmin")
 
 
 //connect to mysql database
-var sequelize = new Sequelize('calatorie', 'root', '', {
+var sequelize = new Sequelize('profile', 'root', '', {
     dialect:'mysql',
     host:'localhost'
 })
 
-sequelize.authenticate().then(function(){
-    console.log('Success')
+sequelize.authenticate().then(() => {
+    console.log("Connected to database")
+}).catch(() => {
+    console.log("Unable to connect to database")
 })
 
 //define a new Model
@@ -32,14 +33,13 @@ Locations.belongsTo(Tourists, {foreignKey: 'tourist_id', targetKey: 'id'})
 
 var app = express()
 
-app.use('/nodeamin', nodeadmin(app))
 
 //access static files
 app.use(express.static('admin'))
 //app.use('/admin', express.static('admin'))
 
 app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded()); // to support URL-encoded bodies
+//app.use(express.urlencoded()); // to support URL-encoded bodies
 
 // get a list of tourists
 app.get('/tourists', function(request, response) {

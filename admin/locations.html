@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Planifica-ti calatoria - Locations</title>
+    <title>Quote manager</title>
     
     <!-- Jquery JS file -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -26,12 +26,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Planifica-ti calatoria</h1>
+            <h1>Quote manager</h1>
         </div>
     </div>
     <ul class="nav nav-tabs">
-      <li role="presentation"><a href="tourists.html">Turisti</a></li>
-      <li role="presentation" class="active"><a href="locations.html">Locati</a></li>
+      <li role="presentation"><a href="tourists.html">Utilizatori</a></li>
+      <li role="presentation" class="active"><a href="locations.html">Citat</a></li>
     </ul>
     <br/>
     <div class="row">
@@ -45,16 +45,16 @@
         <div class="col-md-12">
             <div class="records_content">
                 <br/>
-                <h3>Locati</h3>
+                <h3>Citat</h3>
                 <table id="articles" class="table table-bordered table-striped">
 						<tr>
 							<th>ID.</th>
-							<th>Nume turist</th>
-							<th>Nume locatie</th>
+							<th>Nume utilizator</th>
+							<th>Nume citat</th>
 							<th>Descriere</th>
 							<th>Update</th>
 							<th>Exclude</th>
-							<th>Vreme</th>
+							<!--<th>Vreme</th>-->
 						</tr>
             		</tr>
 				</<table>
@@ -72,17 +72,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add New Location</h4>
+                <h4 class="modal-title" id="myModalLabel">Adaugare citat</h4>
             </div>
             <div class="modal-body">
                 <form id="record_form">
                     <input type="hidden" name="id" id="id" />
                     <div class="form-group">
-                        <label for="name">ID Turist</label>
+                        <label for="name">ID utilizator</label>
                         <input type="text" name="tourist_id" id="tourist_id" placeholder="ID Turist" class="form-control"/>
                     </div>
                     <div class="form-group">
-                        <label for="name">Nume locatie</label>
+                        <label for="name">Nume citat</label>
                         <input type="text" name="name" id="name" placeholder="Nume" class="form-control"/>
                     </div>
                     <div class="form-group">
@@ -98,7 +98,7 @@
         </div>
     </div>
 </div>
-<!-- // Modal -->
+<!-- // Modal -->@
 
 
 

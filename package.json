@@ -1,10 +1,11 @@
 {
   "name": "proiect_tw_bun",
   "version": "1.0.0",
-  "description": "",
+  "description": "proiect",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/CAdrian31/Proiect-Teh-Web#readme",
   "dependencies": {
-    "express": "^4.16.2"
-  }
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.3"
+  },
+  "devDependencies": {}
 }
